@@ -1,0 +1,1 @@
+slurmstepd: error: *** JOB 354643 ON ceg-brook01 CANCELLED AT 2022-11-05T16:19:34 DUE TO TIME LIMIT ***
