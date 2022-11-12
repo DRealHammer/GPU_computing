@@ -15,14 +15,32 @@
 //
 
 __global__ void 
-globalMemCoalescedKernel(/*TODO Parameters*/)
+globalMemCoalescedKernel(int memsize_per_thread, int* memA, int* memB)
 {
-    /*TODO Kernel Code*/
+    // number of previous blocks threads + our thread number, accumulated offset
+    //int offset = (blockIdx.x * blockDim.x + threadIdx.x ) * memsize_per_thread;
+    //void* addr_source = (char*) (memA) + offset;
+    //void* addr_target = (char*) (memB) + offset;
+    //memcpy(addr_target, addr_source, memsize_per_thread);
+
+
+    int entries_per_thread = memsize_per_thread / sizeof(int);
+
+    int entry_offset = (blockIdx.x * blockDim.x + threadIdx.x ) * entries_per_thread;
+
+    for (int i = 0; i < entries_per_thread; i++) {
+        memB[i + entry_offset] = memA[i + entry_offset];
+    }
+
+    
 }
 
 void 
-globalMemCoalescedKernel_Wrapper(dim3 gridDim, dim3 blockDim /*TODO Parameters*/) {
-	globalMemCoalescedKernel<<< gridDim, blockDim, 0 /*Shared Memory Size*/ >>>( /*TODO Parameters*/);
+globalMemCoalescedKernel_Wrapper(dim3 gridDim, dim3 blockDim, int memsize, int* memA, int* memB) {
+
+    int mem_per_block = memsize / gridDim.x;
+    int mem_per_thread = mem_per_block / blockDim.x;
+	globalMemCoalescedKernel<<< gridDim, blockDim, 0 /*Shared Memory Size*/ >>>(mem_per_thread, memA, memB);
 }
 
 __global__ void 
