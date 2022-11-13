@@ -35,8 +35,8 @@ void printHelp(char *);
 
 
 extern void globalMemCoalescedKernel_Wrapper(dim3 gridDim, dim3 blockDim, int memsize, int* memA, int* memB);
-extern void globalMemStrideKernel_Wrapper(dim3 gridDim, dim3 blockDim /*TODO Parameters*/);
-extern void globalMemOffsetKernel_Wrapper(dim3 gridDim, dim3 blockDim /*TODO Parameters*/);
+extern void globalMemStrideKernel_Wrapper(dim3 gridDim, dim3 blockDim, int memsize, int* memA, int* memB, int stride);
+extern void globalMemOffsetKernel_Wrapper(dim3 gridDim, dim3 blockDim, int* memA, int* memB, int dataCount, int offset);
 
 //
 // Main
@@ -216,9 +216,9 @@ main ( int argc, char * argv[] )
 			
             globalMemCoalescedKernel_Wrapper(grid_dim, block_dim, optMemorySize, d_memoryA, d_memoryB);
         } else if ( chCommandLineGetBool ( "global-stride", argc, argv ) ) {
-            globalMemStrideKernel_Wrapper(grid_dim, block_dim /*TODO Parameters*/);
+            globalMemStrideKernel_Wrapper(grid_dim, block_dim, optMemorySize, d_memoryA, d_memoryB, optStride);
         } else if ( chCommandLineGetBool ( "global-offset", argc, argv ) ) {
-            globalMemOffsetKernel_Wrapper(grid_dim, block_dim /*TODO Parameters*/);
+            globalMemOffsetKernel_Wrapper(grid_dim, block_dim, d_memoryA, d_memoryB, optMemorySize / sizeof(int), optOffset);
         } else {
             break;
         }

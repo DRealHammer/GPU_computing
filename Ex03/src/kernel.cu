@@ -15,7 +15,7 @@
 //
 
 __global__ void 
-globalMemCoalescedKernel(int memsize_per_thread, int* memA, int* memB)
+globalMemCoalescedKernel(/*int memsize_per_thread, */int* memA, int* memB)
 {
     // number of previous blocks threads + our thread number, accumulated offset
     //int offset = (blockIdx.x * blockDim.x + threadIdx.x ) * memsize_per_thread;
@@ -24,13 +24,14 @@ globalMemCoalescedKernel(int memsize_per_thread, int* memA, int* memB)
     //memcpy(addr_target, addr_source, memsize_per_thread);
 
 
-    int entries_per_thread = memsize_per_thread / sizeof(int);
+    //int entries_per_thread = memsize_per_thread / sizeof(int);
 
-    int entry_offset = (blockIdx.x * blockDim.x + threadIdx.x ) * entries_per_thread;
+    //int entry_offset = (blockIdx.x * blockDim.x + threadIdx.x ) * entries_per_thread;
 
-    for (int i = 0; i < entries_per_thread; i++) {
-        memB[i + entry_offset] = memA[i + entry_offset];
-    }
+    //memB[entry_offset] = memA[entry_offset];
+
+    int tid = blockIdx.x * blockDim.x + threadIdx.x;
+    memB[tid] = memA[tid];
 
     
 }
@@ -38,30 +39,49 @@ globalMemCoalescedKernel(int memsize_per_thread, int* memA, int* memB)
 void 
 globalMemCoalescedKernel_Wrapper(dim3 gridDim, dim3 blockDim, int memsize, int* memA, int* memB) {
 
-    int mem_per_block = memsize / gridDim.x;
-    int mem_per_thread = mem_per_block / blockDim.x;
-	globalMemCoalescedKernel<<< gridDim, blockDim, 0 /*Shared Memory Size*/ >>>(mem_per_thread, memA, memB);
+    //int mem_per_block = memsize / gridDim.x;
+    //int mem_per_thread = mem_per_block / blockDim.x;
+	globalMemCoalescedKernel<<< gridDim, blockDim, 0 /*Shared Memory Size*/ >>>(/*mem_per_thread, */memA, memB);
 }
 
 __global__ void 
-globalMemStrideKernel(/*TODO Parameters*/)
+globalMemStrideKernel(int N,int* d_in, int* d_out, int optStride)
 {
-    /*TODO Kernel Code*/
+   int tid = threadIdx.x + blockIdx.x * blockDim.x;
+
+   if (tid >= N) return;
+ 
+   d_out[tid] = d_in[tid * optStride];
+    
 }
 
 void 
-globalMemStrideKernel_Wrapper(dim3 gridDim, dim3 blockDim /*TODO Parameters*/) {
-	globalMemStrideKernel<<< gridDim, blockDim, 0 /*Shared Memory Size*/ >>>( /*TODO Parameters*/);
+globalMemStrideKernel_Wrapper(dim3 gridDim, dim3 blockDim, int mem_size, int* d_in, int* d_out, int optStride) {
+	
+   
+    //int threads_per_block;
+    //int block_count;
+    //int size_per_element;
+    //each thread transfers one element
+    
+    globalMemStrideKernel<<< gridDim, blockDim, 0 >>>(mem_size, d_in, d_out, optStride);
 }
 
 __global__ void 
-globalMemOffsetKernel(/*TODO Parameters*/)
+globalMemOffsetKernel(int* d_in, int* d_out, int dataCount, int optOffset)
 {
-    /*TODO Kernel Code*/
+    const int tid = threadIdx.x + blockIdx.x * blockDim.x;
+
+    //global thread index < available data?
+    if(tid < dataCount)
+    {
+        d_out[tid] = d_in[tid + optOffset];
+    }
 }
 
 void 
-globalMemOffsetKernel_Wrapper(dim3 gridDim, dim3 blockDim /*TODO Parameters*/) {
-	globalMemOffsetKernel<<< gridDim, blockDim, 0 /*Shared Memory Size*/ >>>( /*TODO Parameters*/);
+globalMemOffsetKernel_Wrapper(dim3 gridDim, dim3 blockDim, int* d_in, int* d_out,int dataCount, int optOffset) 
+{
+    globalMemOffsetKernel<<< gridDim, blockDim, 0 >>>(d_in, d_out, dataCount, optOffset);
 }
 
