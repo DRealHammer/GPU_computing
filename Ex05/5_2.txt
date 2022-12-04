@@ -1,0 +1,458 @@
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  1x1x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 4
+***    Time to Copy to Device: 0.02309 ms
+***    Copy Bandwidth: 0.00138588 GB/s
+***    Time to Copy from Device: 0.01401 ms
+***    Copy Bandwidth: 0.00114204 GB/s
+***    Time for Matrix Multiplication: 0.035981 ms
+***
+*** Speedup without Data Movement: 0.00416887
+*** Speedup with Data Movement: 0.00205252
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  1x1x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 16
+***    Time to Copy to Device: 0.02341 ms
+***    Copy Bandwidth: 0.00546775 GB/s
+***    Time to Copy from Device: 0.014341 ms
+***    Copy Bandwidth: 0.00446273 GB/s
+***    Time for Matrix Multiplication: 0.03588 ms
+***
+*** Speedup without Data Movement: 0.00613155
+*** Speedup with Data Movement: 0.00298787
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  1x1x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 64
+***    Time to Copy to Device: 0.023901 ms
+***    Copy Bandwidth: 0.0214217 GB/s
+***    Time to Copy from Device: 0.01412 ms
+***    Copy Bandwidth: 0.0181303 GB/s
+***    Time for Matrix Multiplication: 0.037081 ms
+***
+*** Speedup without Data Movement: 0.0156414
+*** Speedup with Data Movement: 0.00772283
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  1x1x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 256
+***    Time to Copy to Device: 0.023101 ms
+***    Copy Bandwidth: 0.0886542 GB/s
+***    Time to Copy from Device: 0.01412 ms
+***    Copy Bandwidth: 0.0725212 GB/s
+***    Time for Matrix Multiplication: 0.037221 ms
+***
+*** Speedup without Data Movement: 0.0824803
+*** Speedup with Data Movement: 0.0412402
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  2x2x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 1024
+***    Time to Copy to Device: 0.023081 ms
+***    Copy Bandwidth: 0.354924 GB/s
+***    Time to Copy from Device: 0.01426 ms
+***    Copy Bandwidth: 0.287237 GB/s
+***    Time for Matrix Multiplication: 0.038071 ms
+***
+*** Speedup without Data Movement: 0.572877
+*** Speedup with Data Movement: 0.289211
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  4x4x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 4096
+***    Time to Copy to Device: 0.02687 ms
+***    Copy Bandwidth: 1.2195 GB/s
+***    Time to Copy from Device: 0.016201 ms
+***    Copy Bandwidth: 1.0113 GB/s
+***    Time for Matrix Multiplication: 0.039 ms
+***
+*** Speedup without Data Movement: 4.76649
+*** Speedup with Data Movement: 2.26503
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  8x8x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 16384
+***    Time to Copy to Device: 0.042681 ms
+***    Copy Bandwidth: 3.07097 GB/s
+***    Time to Copy from Device: 0.036301 ms
+***    Copy Bandwidth: 1.80535 GB/s
+***    Time for Matrix Multiplication: 0.04698 ms
+***
+*** Speedup without Data Movement: 54.5301
+*** Speedup with Data Movement: 20.3381
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  13x13x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 40000
+***    Time to Copy to Device: 0.058661 ms
+***    Copy Bandwidth: 5.45507 GB/s
+***    Time to Copy from Device: 0.077121 ms
+***    Copy Bandwidth: 2.07466 GB/s
+***    Time for Matrix Multiplication: 0.066361 ms
+***
+*** Speedup without Data Movement: 102.695
+*** Speedup with Data Movement: 33.7133
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  16x16x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 65536
+***    Time to Copy to Device: 0.078062 ms
+***    Copy Bandwidth: 6.7163 GB/s
+***    Time to Copy from Device: 0.148112 ms
+***    Copy Bandwidth: 1.7699 GB/s
+***    Time for Matrix Multiplication: 0.089122 ms
+***
+*** Speedup without Data Movement: 223.198
+*** Speedup with Data Movement: 63.0893
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  19x19x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 90000
+***    Time to Copy to Device: 0.096312 ms
+***    Copy Bandwidth: 7.4757 GB/s
+***    Time to Copy from Device: 0.196934 ms
+***    Copy Bandwidth: 1.82802 GB/s
+***    Time for Matrix Multiplication: 0.133292 ms
+***
+*** Speedup without Data Movement: 177.772
+*** Speedup with Data Movement: 55.5532
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  25x25x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 160000
+***    Time to Copy to Device: 0.146652 ms
+***    Copy Bandwidth: 8.72815 GB/s
+***    Time to Copy from Device: 0.341575 ms
+***    Copy Bandwidth: 1.87367 GB/s
+***    Time for Matrix Multiplication: 0.239354 ms
+***
+*** Speedup without Data Movement: 237.452
+*** Speedup with Data Movement: 78.1152
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  32x32x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 262144
+***    Time to Copy to Device: 0.235904 ms
+***    Copy Bandwidth: 8.88985 GB/s
+***    Time to Copy from Device: 0.549179 ms
+***    Copy Bandwidth: 1.90935 GB/s
+***    Time for Matrix Multiplication: 0.489378 ms
+***
+*** Speedup without Data Movement: 612.694
+*** Speedup with Data Movement: 235.267
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  38x38x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 360000
+***    Time to Copy to Device: 0.283095 ms
+***    Copy Bandwidth: 10.1733 GB/s
+***    Time to Copy from Device: 0.722072 ms
+***    Copy Bandwidth: 1.99426 GB/s
+***    Time for Matrix Multiplication: 0.782333 ms
+***
+*** Speedup without Data Movement: 248.952
+*** Speedup with Data Movement: 108.958
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  44x44x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 490000
+***    Time to Copy to Device: 0.350836 ms
+***    Copy Bandwidth: 11.1733 GB/s
+***    Time to Copy from Device: 0.943176 ms
+***    Copy Bandwidth: 2.07809 GB/s
+***    Time for Matrix Multiplication: 1.40151 ms
+***
+*** Speedup without Data Movement: 221.541
+*** Speedup with Data Movement: 115.188
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  50x50x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 640000
+***    Time to Copy to Device: 0.468647 ms
+***    Copy Bandwidth: 10.9251 GB/s
+***    Time to Copy from Device: 1.20478 ms
+***    Copy Bandwidth: 2.12487 GB/s
+***    Time for Matrix Multiplication: 1.67479 ms
+***
+*** Speedup without Data Movement: 277.009
+*** Speedup with Data Movement: 138.561
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  57x57x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 810000
+***    Time to Copy to Device: 0.60633 ms
+***    Copy Bandwidth: 10.6872 GB/s
+***    Time to Copy from Device: 1.53634 ms
+***    Copy Bandwidth: 2.1089 GB/s
+***    Time for Matrix Multiplication: 2.45037 ms
+***
+*** Speedup without Data Movement: 270.243
+*** Speedup with Data Movement: 144.174
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  64x64x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 1048576
+***    Time to Copy to Device: 0.735783 ms
+***    Copy Bandwidth: 11.4009 GB/s
+***    Time to Copy from Device: 1.90638 ms
+***    Copy Bandwidth: 2.20014 GB/s
+***    Time for Matrix Multiplication: 3.50862 ms
+***
+*** Speedup without Data Movement: 2181.71
+*** Speedup with Data Movement: 1244.52
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  82x82x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 1690000
+***    Time to Copy to Device: 1.2054 ms
+***    Copy Bandwidth: 11.2162 GB/s
+***    Time to Copy from Device: 3.04745 ms
+***    Copy Bandwidth: 2.21825 GB/s
+***    Time for Matrix Multiplication: 7.68548 ms
+***
+*** Speedup without Data Movement: 260.509
+*** Speedup with Data Movement: 167.707
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  100x100x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 2560000
+***    Time to Copy to Device: 1.83235 ms
+***    Copy Bandwidth: 11.1769 GB/s
+***    Time to Copy from Device: 4.56422 ms
+***    Copy Bandwidth: 2.24354 GB/s
+***    Time for Matrix Multiplication: 11.9542 ms
+***
+*** Speedup without Data Movement: 354.82
+*** Speedup with Data Movement: 231.14
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  128x128x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 4194304
+***    Time to Copy to Device: 3.02704 ms
+***    Copy Bandwidth: 11.0849 GB/s
+***    Time to Copy from Device: 7.4003 ms
+***    Copy Bandwidth: 2.2671 GB/s
+***    Time for Matrix Multiplication: 25.2416 ms
+***
+*** Speedup without Data Movement: 2237.48
+*** Speedup with Data Movement: 1583.38
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  157x157x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 6250000
+***    Time to Copy to Device: 4.37746 ms
+***    Copy Bandwidth: 11.4221 GB/s
+***    Time to Copy from Device: 10.916 ms
+***    Copy Bandwidth: 2.29021 GB/s
+***    Time for Matrix Multiplication: 48.8629 ms
+***
+*** Speedup without Data Movement: 801.309
+*** Speedup with Data Movement: 610.295
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  188x188x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 9000000
+***    Time to Copy to Device: 6.20454 ms
+***    Copy Bandwidth: 11.6044 GB/s
+***    Time to Copy from Device: 15.5827 ms
+***    Copy Bandwidth: 2.31026 GB/s
+***    Time for Matrix Multiplication: 73.2962 ms
+***
+*** Speedup without Data Movement: 1106.94
+*** Speedup with Data Movement: 853.299
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  219x219x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 12250000
+***    Time to Copy to Device: 8.41876 ms
+***    Copy Bandwidth: 11.6407 GB/s
+***    Time to Copy from Device: 21.0631 ms
+***    Copy Bandwidth: 2.32634 GB/s
+***    Time for Matrix Multiplication: 131.594 ms
+***
+*** Speedup without Data Movement: 1207.46
+*** Speedup with Data Movement: 986.454
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  256x256x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 16777216
+***    Time to Copy to Device: 11.3467 ms
+***    Copy Bandwidth: 11.8288 GB/s
+***    Time to Copy from Device: 28.6034 ms
+***    Copy Bandwidth: 2.34618 GB/s
+***    Time for Matrix Multiplication: 184.249 ms
+***
+*** Speedup without Data Movement: 2906.33
+*** Speedup with Data Movement: 2388.44
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  313x313x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 25000000
+***    Time to Copy to Device: 16.7235 ms
+***    Copy Bandwidth: 11.9592 GB/s
+***    Time to Copy from Device: 42.3607 ms
+***    Copy Bandwidth: 2.36068 GB/s
+***    Time for Matrix Multiplication: 288.957 ms
+***
+*** Speedup without Data Movement: 1960.72
+*** Speedup with Data Movement: 1627.86
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  375x375x1
+*** Block Dim: 16x16x1
+***
+slurmstepd: error: *** JOB 419233 ON ceg-brook01 CANCELLED AT 2022-12-04T16:05:22 DUE TO TIME LIMIT ***

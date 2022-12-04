@@ -1,0 +1,96 @@
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  1024x1024x1
+*** Block Dim: 1x1x1
+***
+***
+*** Results:
+***    Matrix Size: 1048576
+***    Time to Copy to Device: 0.737092 ms
+***    Copy Bandwidth: 11.3807 GB/s
+***    Time to Copy from Device: 1.90513 ms
+***    Copy Bandwidth: 2.20158 GB/s
+***    Time for Matrix Multiplication: 146.7 ms
+***
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  512x512x1
+*** Block Dim: 2x2x1
+***
+***
+*** Results:
+***    Matrix Size: 1048576
+***    Time to Copy to Device: 0.736002 ms
+***    Copy Bandwidth: 11.3975 GB/s
+***    Time to Copy from Device: 1.90987 ms
+***    Copy Bandwidth: 2.19612 GB/s
+***    Time for Matrix Multiplication: 43.7724 ms
+***
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  256x256x1
+*** Block Dim: 4x4x1
+***
+***
+*** Results:
+***    Matrix Size: 1048576
+***    Time to Copy to Device: 0.740462 ms
+***    Copy Bandwidth: 11.3289 GB/s
+***    Time to Copy from Device: 1.90516 ms
+***    Copy Bandwidth: 2.20155 GB/s
+***    Time for Matrix Multiplication: 15.2076 ms
+***
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  128x128x1
+*** Block Dim: 8x8x1
+***
+***
+*** Results:
+***    Matrix Size: 1048576
+***    Time to Copy to Device: 0.736542 ms
+***    Copy Bandwidth: 11.3892 GB/s
+***    Time to Copy from Device: 1.89994 ms
+***    Copy Bandwidth: 2.2076 GB/s
+***    Time for Matrix Multiplication: 5.48986 ms
+***
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  64x64x1
+*** Block Dim: 16x16x1
+***
+***
+*** Results:
+***    Matrix Size: 1048576
+***    Time to Copy to Device: 0.737652 ms
+***    Copy Bandwidth: 11.372 GB/s
+***    Time to Copy from Device: 1.90453 ms
+***    Copy Bandwidth: 2.20228 GB/s
+***    Time for Matrix Multiplication: 3.53784 ms
+***
+***
+*** Starting ...
+***
+***
+*** Grid Dim:  32x32x1
+*** Block Dim: 32x32x1
+***
+***
+*** Results:
+***    Matrix Size: 1048576
+***    Time to Copy to Device: 0.739082 ms
+***    Copy Bandwidth: 11.35 GB/s
+***    Time to Copy from Device: 1.90587 ms
+***    Copy Bandwidth: 2.20073 GB/s
+***    Time for Matrix Multiplication: 3.99588 ms
+***
